@@ -1,35 +1,22 @@
-import express from 'express'
-import * as dotenv from 'dotenv'
-import { MongoClient } from 'mongodb';
+import express from "express";
+import * as dotenv from "dotenv";
+import { MongoClient } from "mongodb";
 import cors from "cors";
 
 const app = express();
-const PORT = 4000;
-const MONGO_URL = process.env.MONGO_URL;
-
-
+const PORT = 8000;
 dotenv.config();
 
 app.use(express.json());
 app.use(cors());
 
-// mongodb connection
+const MONGO_URL = process.env.MONGO_URL;
 
-async function createConnection() {
-    const client = new MongoClient(MONGO_URL)
-    await client.connect();
-    console.log("DB is connected successfully")
-    return client;
-}
-
-export const client = await createConnection();
-
-// default route landing page 
 app.get("/", (req, res) => {
-    res.send("Diet-Suggestion App Backend");
+    res.send("Diet_Suggestion App Backend is Working");
 });
 
-app.listen(PORT, () => {
-    console.log(`Server started at the PORT:${PORT}`)
-}
-)
+
+app.listen(PORT, () =>
+    console.log(`Server started on PORT:${PORT}`)
+);
