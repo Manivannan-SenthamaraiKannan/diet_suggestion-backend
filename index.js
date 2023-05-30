@@ -4,6 +4,8 @@ import connectDB from './db.js'
 import * as dotenv from "dotenv";
 import { MongoClient } from "mongodb";
 import { Keto } from "./Routes/Keto.js";
+import { Mediterranean } from './Routes/Mediterranean.js';
+import { fasting } from './Routes/Intermittent_fasting.js'
 
 const app = express();
 const PORT = 8000;
@@ -31,6 +33,8 @@ app.get("/", (req, res) => {
 });
 
 app.use("/keto", Keto);
+app.use("/mediterranean", Mediterranean);
+app.use("/fasting", fasting);
 
 
 app.listen(PORT, () =>
