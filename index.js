@@ -10,7 +10,7 @@ import { Weight_Watchers } from './Routes/Weight_Watchers.js';
 import { Gluten_free } from './Routes/Gluten_free.js'
 import { South_Beach } from './Routes/South_Beach.js'
 import { Nutrisystem } from './Routes/Nutrisystem.js'
-import { Diet_to_Go } from './Routes/Diet-to-Go'
+import { Diet_to_Go } from './Routes/Diet_to_Go.js'
 import { Low_Carbohydrate } from './Routes/Low_Carbohydrate.js'
 
 const app = express();
