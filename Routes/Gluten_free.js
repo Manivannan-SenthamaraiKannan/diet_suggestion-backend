@@ -7,7 +7,7 @@ router.post("/", async (req, res) => {
     const newProduct = req.body;
     const result = await client
         .db("DietPlan")
-        .collection("Low_Carbohydrate")
+        .collection("Gluten_free")
         .insertMany(newProduct);
     res.send(result);
 });
@@ -16,7 +16,7 @@ router.post("/", async (req, res) => {
 router.get("/", async (req, res) => {
     const result = await client
         .db("DietPlan")
-        .collection("Low_Carbohydrate")
+        .collection("Gluten_free")
         .find({})
         .toArray();
     res.send(result);
@@ -27,11 +27,11 @@ router.get("/:id", async (req, res) => {
     const id = parseInt(req.params.id)
     const result = await client
         .db("DietPlan")
-        .collection("Low_Carbohydrate")
+        .collection("Gluten_free")
         .findOne({ id: id });
     result
         ? res.send(result)
         : res.status(404).send({ message: "No Diet found" });
 });
 
-export const Low_Carbohydrate = router;
+export const Gluten_free = router;
