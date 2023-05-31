@@ -12,6 +12,16 @@ import { South_Beach } from './Routes/South_Beach.js'
 import { Nutrisystem } from './Routes/Nutrisystem.js'
 import { Diet_to_Go } from './Routes/Diet_to_Go.js'
 import { Low_Carbohydrate } from './Routes/Low_Carbohydrate.js'
+import { Macrobiotic } from './Routes/Macrobiotic.js'
+import { Paleolithic } from './Routes/Paleolithic.js'
+import { SlimFast } from './Routes/SlimFast.js'
+import { Pescetarianism } from './Routes/Pescetarianism.js'
+import { Vegetarianism } from './Routes/Vegetarianism.js'
+import { Whole30 } from './Routes/Whole30.js'
+import { Zone } from './Routes/Zone.js'
+import { Low_fat } from './Routes/Low_fat.js'
+import { Raw_food } from './Routes/Raw_food.js'
+import { Flexitarian } from './Routes/Flexitarian.js'
 
 const app = express();
 const PORT = 8000;
@@ -46,6 +56,16 @@ app.use('/south', South_Beach)
 app.use('/nutrisystem', Nutrisystem)
 app.use('/diettogo', Diet_to_Go)
 app.use('/carbohydrate', Low_Carbohydrate)
+app.use('/macrobiotic', Macrobiotic)
+app.use('/paleolithic', Paleolithic)
+app.use('/slimfast', SlimFast)
+app.use('/pescetarianism', Pescetarianism)
+app.use('/vegetarianism', Vegetarianism)
+app.use('/whole30', Whole30)
+app.use('/zone', Zone)
+app.use('/lowfat', Low_fat)
+app.use('/rawfood', Raw_food)
+app.use('/flexitarian', Flexitarian)
 
 app.listen(PORT, () =>
     console.log(`https://localhost:${PORT}`)
