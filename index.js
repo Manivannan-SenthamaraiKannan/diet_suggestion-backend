@@ -43,7 +43,7 @@ async function createConnection() {
 export const client = await createConnection();
 
 app.get("/", (req, res) => {
-    res.send("Diet_Suggestion App Backend is Working");
+    res.send("<h1>Diet Suggestion Backend</h1>");
 });
 
 app.use("/keto", Keto);
