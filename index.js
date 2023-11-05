@@ -22,7 +22,11 @@ import { Zone } from './Routes/Zone.js'
 import { Low_fat } from './Routes/Low_fat.js'
 import { Raw_food } from './Routes/Raw_food.js'
 import { Flexitarian } from './Routes/Flexitarian.js'
-
+import { Diabetic } from "./Routes/Diabetic.js";
+import { Dukan } from "./Routes/Dukan.js";
+import { Alkaline } from "./Routes/Alkaline.js";
+import {Low_calorie} from "./Routes/Low_Calorie.js"
+ 
 const app = express();
 const PORT = 8000;
 dotenv.config();
@@ -66,6 +70,10 @@ app.use('/zone', Zone)
 app.use('/lowfat', Low_fat)
 app.use('/rawfood', Raw_food)
 app.use('/flexitarian', Flexitarian)
+app.use('/diabetic', Diabetic)
+app.use('/dukan', Dukan)
+app.use('/alkaline', Alkaline)
+app.use('/lowcalorie',Low_calorie)
 
 app.listen(PORT, () =>
     console.log(`https://localhost:${PORT}`)
