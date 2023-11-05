@@ -25,8 +25,8 @@ import { Flexitarian } from './Routes/Flexitarian.js'
 import { Diabetic } from "./Routes/Diabetic.js";
 import { Dukan } from "./Routes/Dukan.js";
 import { Alkaline } from "./Routes/Alkaline.js";
-import {Low_calorie} from "./Routes/Low_Calorie.js"
- 
+import { Low_Calorie } from "./Routes/Low_Calorie.js"
+
 const app = express();
 const PORT = 8000;
 dotenv.config();
@@ -73,7 +73,7 @@ app.use('/flexitarian', Flexitarian)
 app.use('/diabetic', Diabetic)
 app.use('/dukan', Dukan)
 app.use('/alkaline', Alkaline)
-app.use('/lowcalorie',Low_calorie)
+app.use('/lowcalorie', Low_Calorie)
 
 app.listen(PORT, () =>
     console.log(`https://localhost:${PORT}`)
