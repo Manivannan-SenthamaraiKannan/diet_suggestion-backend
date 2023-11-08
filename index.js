@@ -27,6 +27,7 @@ import { Dukan } from "./Routes/Dukan.js";
 import { Alkaline } from "./Routes/Alkaline.js";
 import { Low_Calorie } from "./Routes/Low_Calorie.js"
 import { Vegan } from "./Routes/Vegan.js"
+import { Carnivore } from "./Routes/Carnivore.js"
 
 const app = express();
 const PORT = 8000;
@@ -76,6 +77,7 @@ app.use('/dukan', Dukan)
 app.use('/alkaline', Alkaline)
 app.use('/lowcalorie', Low_Calorie)
 app.use('/vegan', Vegan)
+app.use('/carnivore',Carnivore)
 
 app.listen(PORT, () =>
     console.log(`https://localhost:${PORT}`)
